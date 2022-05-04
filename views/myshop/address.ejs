@@ -1,0 +1,238 @@
+<%- include('../includes/m-head.ejs') %>
+
+	</head>
+
+<body>
+	<!-- Add Address Model Start-->
+<div id="address_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog category-area" role="document">
+        <div class="category-area-inner">
+            <div class="modal-header">
+                <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+                    <i class="uil uil-multiply"></i>
+                </button>
+            </div>
+            <div class="category-model-content modal-content"> 
+                <div class="cate-header">
+                    <h4>Add New Address</h4>
+                </div>
+                <div class="add-address-form">
+                    <div class="checout-address-step">
+                        <div class="row">
+                            <div class="col-lg-12">			
+                                <form class="product-form" action="/my-address" method="POST" enctype="multipart/form-data">
+                                    
+                                    <!-- Multiple Radios (inline) -->
+                                    <!-- <div class="form-group">
+                                        <div class="product-radio">
+                                            <ul class="product-now">
+                                                <li>
+                                                    <input type="radio" id="ad1" name="address1" checked="" value="home">
+                                                    <label for="ad1">Home</label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" id="ad2" name="address1" value="office">
+                                                    <label for="ad2">Office</label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" id="ad3" name="address1">
+                                                    <label for="ad3">Other</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div> -->
+                                    <div class="address-fieldset">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label">Name*</label>
+                                                    <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md" value="<% if (editing) { %><%= address.name %><% } %>" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label">Phone No.*</label>
+                                                    <input id="phoneNo" name="phoneNo" type="text" placeholder="Phone No." class="form-control input-md" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <div class="form-group">
+                                                    <label for="add" class="control-label">Address*</label>
+                                                    <input id="add" name="add" type="text" placeholder="Address" class="form-control input-md" required="" value="<% if (editing) { %><%= address.add %><% } %>">
+                                                </div>
+                                            </div>
+                                            <!-- <div class="col-lg-12 col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label">Street / Society / Office Name*</label>
+                                                    <input id="street" name="street" type="text" placeholder="Street Address" class="form-control input-md">
+                                                </div>
+                                            </div> -->
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label">Pincode*</label>
+                                                    <input id="pincode" name="pincode" type="number" placeholder="Pincode" class="form-control input-md" value="<% if (editing) { %><%= address.pincode %><% } %>" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label">Locality*</label>
+                                                    <input id="Locality" name="locality" type="text" placeholder="Enter City" class="form-control input-md" required="" value="<% if (editing) { %><%= address.locality %><% } %>">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <div class="form-group">
+                                                    <div class="address-btns">
+                                                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                                        <button class="save-btn14 hover-btn" type="submit">Save</button>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Add Address Model End-->
+	<!-- Category Model Start-->
+	<%- include('../includes/catnsearch.ejs') %>
+
+	<!-- Search Model End-->
+
+	<!-- Cart Sidebar Offset Start-->
+	<div class="bs-canvas bs-canvas-left position-fixed bg-cart h-100">
+    <div class="bs-canvas-header side-cart-header p-3 ">
+        <div class="d-inline-block  main-cart-title">My Cart <span></span></div>
+        <button type="button" class="bs-canvas-close close" aria-label="Close"><i class="uil uil-multiply"></i></button>
+    </div>
+        <h2>Please Add Some Products</h2>
+    </div>
+
+	<!-- Cart Sidebar Offsetl End-->
+
+	<!-- Header Start -->
+	<%- include('../includes/m-header.ejs') %>
+
+	<!-- Header End -->
+	<!-- Body Start -->
+	<div class="wrapper">
+		<div class="gambo-Breadcrumb">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="https://cartgrow.herokuapp.com/">Home</a></li>
+								<li class="breadcrumb-item active" aria-current="page">User Dashboard</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dashboard-group">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="user-dt">
+							<div class="user-img">
+								<img src="./CartGrow_My Address_files/img-5(1).jpg" alt="">
+								<div class="img-add">													
+									<input type="file" id="file">
+									<label for="file"><i class="uil uil-camera-plus"></i></label>
+								</div>
+							</div>
+							<h4>anurag verma</h4>
+							<p>anurag2002lll@gmail.com<a href="https://cartgrow.herokuapp.com/my-address#"><i class="uil uil-edit"></i></a></p>
+							<div class="earn-points"><img src="./CartGrow_My Address_files/Dollar.svg" alt="">Points : <span>20</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-4">
+						<div class="left-side-tabs">
+							<div class="dashboard-left-links">
+								<a href="https://cartgrow.herokuapp.com/overview" class="user-item"><i class="uil uil-apps"></i>Overview</a>
+								<a href="https://cartgrow.herokuapp.com/order" class="user-item"><i class="uil uil-box"></i>My Orders</a>
+								<a href="https://cartgrow.herokuapp.com/my-reward" class="user-item"><i class="uil uil-gift"></i>My Rewards</a>
+								<a href="https://cartgrow.herokuapp.com/my-wallet" class="user-item"><i class="uil uil-wallet"></i>My Wallet</a>
+								<a href="https://cartgrow.herokuapp.com/wishlist" class="user-item"><i class="uil uil-heart"></i>Shopping Wishlist</a>
+								<a href="https://cartgrow.herokuapp.com/cart" class="user-item"><i class="uil uil-shopping-cart-alt"></i>Cart</a>
+								<a href="https://cartgrow.herokuapp.com/my-address" class="user-item active"><i class="uil uil-location-point"></i>My Address</a>
+								<a href="https://cartgrow.herokuapp.com/sign_in" class="user-item"><i class="uil uil-exit"></i>Logout</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-8">
+						<div class="dashboard-right">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="main-title-tab">
+										<h4><i class="uil uil-location-point"></i>My Address</h4>
+									</div>
+								</div>
+                                
+								<div class="col-lg-12 col-md-12">
+									<div class="pdpt-bg">
+										<div class="pdpt-title">
+											<h4>My Address</h4>
+										</div>
+										<div class="address-body">
+											<a href="https://cartgrow.herokuapp.com/my-address#" class="add-address hover-btn" data-toggle="modal" data-target="#address_model">Add New Address</a>
+											
+                                <% for (let address of adds) { %>
+										    <div class="address-item">
+													<div class="address-icon1">
+														<i class="uil uil-home-alt"></i>
+													</div>
+													<div class="address-dt-all">
+														<h4>Pincode: <%= address.pincode %></h4>
+														<h4>phoneNo: <%= address.phoneNo %></h4>
+		<p>Full Address: <%= address.add %> </p>	
+        <p>Locality: <%= address.locality %></p>
+														<ul class="action-btns">
+															<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+															<li>
+                                                                
+                                    <form action="/delete-address" method="POST">
+                                        <input type="hidden" value="<%= address._id %>" name="addressId">
+                                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                        <button class="btn" type="submit"><i class="uil uil-trash-alt"></i></button>
+                                    </form>
+                                                                
+                                                            </li>
+														</ul>
+													</div>
+												</div>
+                                <% } %>
+											
+											
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>	
+		</div>	
+	</div>
+	<!-- Body End -->
+	<!-- Footer Start -->
+    <%- include('../includes/m-foot.ejs') %>
+
+	<!-- Footer End -->
+
+	<!-- Javascripts -->
+    <%- include('../includes/m-footer.ejs') %>

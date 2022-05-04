@@ -1,0 +1,164 @@
+<%- include('../includes/m-head.ejs') %>
+
+</head>
+
+<body>
+    <!-- Category Model Start-->
+    <%- include('../includes/catnsearch.ejs') %>
+    <!-- Search Model End-->
+
+    <!-- Header Start -->
+    <%- include('../includes/m-header.ejs') %>
+    <!-- Header End -->
+    <!-- Body Start -->
+    <div class="wrapper">
+        <div class="gambo-Breadcrumb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="https://cartgrow.herokuapp.com/">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">User Dashboard</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-group">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="user-dt">
+                            <div class="user-img">
+                                <img src="/cartgrow/util/img-5.jpg" alt="">
+                                <div class="img-add">
+                                    <input type="file" id="file">
+                                    <label for="file"><i class="uil uil-camera-plus"></i></label>
+                                </div>
+                            </div>
+                            <h4><%= username %></h4>
+                            <p><%= email %><i class="uil uil-edit"></i></a></p>
+                            <!-- <div class="earn-points"><img src="./CartGrow_Your Cart_files/Dollar.svg" alt="">Points :
+                                <span>20</span></div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="left-side-tabs">
+                            <div class="dashboard-left-links">
+                                <a href="/overview" class="user-item"><i
+                                        class="uil uil-apps"></i>Overview</a>
+                                <a href="/orders" class="user-item"><i
+                                        class="uil uil-box"></i>My Orders</a>
+                                <a href="/my-rewards" class="user-item"><i
+                                        class="uil uil-gift"></i>My Rewards</a>
+                                <a href="/my-wallet" class="user-item"><i
+                                        class="uil uil-wallet"></i>My Wallet</a>
+                                <a href="/wishlist" class="user-item"><i
+                                        class="uil uil-heart"></i>Shopping Wishlist</a>
+                                <a href="/cart" class="user-item active"><i
+                                        class="uil uil-shopping-cart-alt"></i>Cart</a>
+                                <a href="/my-address" class="user-item"><i
+                                        class="uil uil-location-point"></i>My Address</a>
+                                <a href="/sign-in" class="user-item"><i
+                                        class="uil uil-exit"></i>Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                    <% if(products.length > 0) { %>
+                    <div class="col-lg-9 col-md-8">
+                        <div class="dashboard-right">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="main-title-tab">
+                                        <h4><i class="uil uil-shopping-cart-alt"></i>Cart</h4>
+                                    </div>
+                                </div>
+                        
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="pdpt-bg">
+                                        
+                                        <% let totalprice = 0; %>
+                                        <% products.forEach(p => { %>
+                                        
+                                        <div class="cart-item">
+                                            <div class="cart-product-img">
+                                                <img src="/<%= p.productId.imageUrl %>" alt="Banana 6 pcs">
+                                            </div>
+                                            <div class="cart-text">
+                                                <h4><%= p.productId.title %></h4>
+                                                <h6>Quantity: <%= p.quantity %></h6>
+                                                <h6>Price: ₹ <%= p.productId.price %></h6>
+                        <% let tprice = p.quantity*p.productId.price %>
+                        <% totalprice += (p.productId.price*p.quantity); %>
+                                                <div class="qty-group">
+                                                    <div class="cart-item-price">
+                                                        ₹ <%= tprice %>
+                                                    </div>
+                                                </div>
+                                                <form action="/my-cart-delete-item" method="POST">
+                                                    <input type="hidden" value="<%= p.productId._id %>"
+                                                        name="productId">
+                                                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                                    <button class="cart-close-btn" type="submit"><i
+                                                            class="uil uil-multiply"></i></button>
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                        <% }) %>
+                                        <div class="total-dt">
+                                            <div class="total-checkout-group">
+                                                <div class="cart-total-dil">
+                                                    <h4>Sub Total</h4>
+                                                    <span>₹ <%= totalprice %></span>
+                                                </div>
+                                                <div class="cart-total-dil pt-3">
+                                                    <h4>Delivery Charges</h4>
+                                                    <span>Free</span>
+                                                </div>
+                                            </div>
+                                            <div class="main-total-cart">
+                                                <h2>Total</h2>
+                                                <span>₹ <%= totalprice %></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="checkout-cart" style="text-align: center!important;">
+                                    <a href="/mycheckout"
+                                        class="cart-checkout-btn hover-btn" style="text-align: justify;">Proceed to
+                                        Checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } else { %>
+                        <img style="display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top: 30px;
+                        width: 50%;" src="/cartgrow/util/emptycart.png" alt="">
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Body End -->
+    <!-- Footer Start -->
+    <%- include('../includes/m-foot.ejs') %>
+
+    <!-- Footer End -->
+
+    <!-- Javascripts -->
+    <%- include('../includes/m-footer.ejs') %>

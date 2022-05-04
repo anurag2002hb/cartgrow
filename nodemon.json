@@ -1,0 +1,8 @@
+{
+  "env": {
+      "MONGO_USER": "nodemysql96",
+      "MONGO_PASSWORD": "16143758",
+      "MONGO_DEFAULT_DATABASE": "shop",
+      "STRIPE_KEY": "sk_test_51Kv02pSH0CNSD487PUjKDHDtJgVnc24BDn91rEwmTL6dqbuEEpwhy6Yfsshwp4491uEWgosEffN3YT88DfARHtbn00vnExz8Gp"
+  }
+}

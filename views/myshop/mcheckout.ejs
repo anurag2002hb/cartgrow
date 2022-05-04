@@ -1,0 +1,716 @@
+<%- include('../includes/m-head.ejs') %>
+
+</head>
+
+<body>
+    <!-- Category Model Start-->
+    <%- include('../includes/catnsearch.ejs') %>
+
+    <!-- Search Model End-->
+
+    <!-- Cart Sidebar Offset Start-->
+    <div class="bs-canvas bs-canvas-left position-fixed bg-cart h-100">
+        <div class="bs-canvas-header side-cart-header p-3 ">
+            <div class="d-inline-block  main-cart-title">My Cart <span></span></div>
+            <button type="button" class="bs-canvas-close close" aria-label="Close"><i
+                    class="uil uil-multiply"></i></button>
+        </div>
+
+
+        <div class="bs-canvas-body">
+            <div class="cart-top-total">
+                <div class="cart-total-dil">
+                    <h4>CartGrow</h4>
+                    <!-- <span>$34</span> -->
+                </div>
+                <!-- <div class="cart-total-dil pt-2">
+                    <h4>Delivery Charges</h4>
+                    <span>$1</span>
+                </div> -->
+            </div>
+            <div class="side-cart-items">
+                <div class="cart-item">
+                    <div class="cart-product-img">
+                        <img src="./CartGrow_Checkout_files/function toISOString() { [native code] }-torai.jpg"
+                            alt="Ridged gourd 1kg">
+                        <!-- <div class="offer-badge">6% OFF</div> -->
+                    </div>
+                    <div class="cart-text">
+                        <h4>Ridged gourd 1kg</h4>
+
+                        <!-- <div class="cart-radio">
+                                <ul class="kggrm-now">
+                                    <li>
+                                        <input type="radio" id="a1" name="cart1">
+                                        <label for="a1">0.50</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="a2" name="cart1">
+                                        <label for="a2">1kg</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="a3" name="cart1">
+                                        <label for="a3">2kg</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="a4" name="cart1">
+                                        <label for="a4">3kg</label>
+                                    </li>
+                                </ul>
+                            </div> -->
+                        <div class="qty-group">
+                            <div class="quantity buttons_added">
+                                <input type="button" value="-" class="minus minus-btn">
+                                <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+                                <input type="button" value="+" class="plus plus-btn">
+                            </div>
+                            <div class="cart-item-price">₹70</div>
+                        </div>
+
+                        <!-- <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button> -->
+                        <form action="https://cartgrow.herokuapp.com/cart-delete-item" method="POST">
+                            <input type="hidden" name="_csrf" value="BFjFkVHe-EL-oxz37BYFh7SfjMZOaQtn-LRY">
+                            <input type="hidden" value="5f7ca3b3d3fe2c3d0c7fb9f7" name="productId">
+                            <button class="cart-close-btn" type="submit"><i class="uil uil-multiply"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="cart-product-img">
+                        <img src="./CartGrow_Checkout_files/function toISOString() { [native code] }-tomato.jpg"
+                            alt="Tomato 1kg">
+                        <!-- <div class="offer-badge">6% OFF</div> -->
+                    </div>
+                    <div class="cart-text">
+                        <h4>Tomato 1kg</h4>
+
+                        <!-- <div class="cart-radio">
+                                <ul class="kggrm-now">
+                                    <li>
+                                        <input type="radio" id="a1" name="cart1">
+                                        <label for="a1">0.50</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="a2" name="cart1">
+                                        <label for="a2">1kg</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="a3" name="cart1">
+                                        <label for="a3">2kg</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="a4" name="cart1">
+                                        <label for="a4">3kg</label>
+                                    </li>
+                                </ul>
+                            </div> -->
+                        <div class="qty-group">
+                            <div class="quantity buttons_added">
+                                <input type="button" value="-" class="minus minus-btn">
+                                <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+                                <input type="button" value="+" class="plus plus-btn">
+                            </div>
+                            <div class="cart-item-price">₹50</div>
+                        </div>
+
+                        <!-- <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button> -->
+                        <form action="https://cartgrow.herokuapp.com/cart-delete-item" method="POST">
+                            <input type="hidden" name="_csrf" value="BFjFkVHe-EL-oxz37BYFh7SfjMZOaQtn-LRY">
+                            <input type="hidden" value="5f76d2ba81a4dc056c49f63f" name="productId">
+                            <button class="cart-close-btn" type="submit"><i class="uil uil-multiply"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="cart-product-img">
+                        <img src="./CartGrow_Checkout_files/function toISOString() { [native code] }-orange.jpg"
+                            alt="Orange 6 pcs">
+                        <!-- <div class="offer-badge">6% OFF</div> -->
+                    </div>
+                    <div class="cart-text">
+                        <h4>Orange 6 pcs</h4>
+
+                        <!-- <div class="cart-radio">
+                                <ul class="kggrm-now">
+                                    <li>
+                                        <input type="radio" id="a1" name="cart1">
+                                        <label for="a1">0.50</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="a2" name="cart1">
+                                        <label for="a2">1kg</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="a3" name="cart1">
+                                        <label for="a3">2kg</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="a4" name="cart1">
+                                        <label for="a4">3kg</label>
+                                    </li>
+                                </ul>
+                            </div> -->
+                        <div class="qty-group">
+                            <div class="quantity buttons_added">
+                                <input type="button" value="-" class="minus minus-btn">
+                                <input type="number" step="1" name="quantity" value="2" class="input-text qty text">
+                                <input type="button" value="+" class="plus plus-btn">
+                            </div>
+                            <div class="cart-item-price">₹63</div>
+                        </div>
+
+                        <!-- <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button> -->
+                        <form action="https://cartgrow.herokuapp.com/cart-delete-item" method="POST">
+                            <input type="hidden" name="_csrf" value="BFjFkVHe-EL-oxz37BYFh7SfjMZOaQtn-LRY">
+                            <input type="hidden" value="5f74df4130b12306bcd77cdf" name="productId">
+                            <button class="cart-close-btn" type="submit"><i class="uil uil-multiply"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="cart-product-img">
+                        <img src="./CartGrow_Checkout_files/function toISOString() { [native code] }-apple.jpg"
+                            alt="Apple 6 pcs">
+                        <!-- <div class="offer-badge">6% OFF</div> -->
+                    </div>
+                    <div class="cart-text">
+                        <h4>Apple 6 pcs</h4>
+
+                        <!-- <div class="cart-radio">
+                                <ul class="kggrm-now">
+                                    <li>
+                                        <input type="radio" id="a1" name="cart1">
+                                        <label for="a1">0.50</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="a2" name="cart1">
+                                        <label for="a2">1kg</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="a3" name="cart1">
+                                        <label for="a3">2kg</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="a4" name="cart1">
+                                        <label for="a4">3kg</label>
+                                    </li>
+                                </ul>
+                            </div> -->
+                        <div class="qty-group">
+                            <div class="quantity buttons_added">
+                                <input type="button" value="-" class="minus minus-btn">
+                                <input type="number" step="1" name="quantity" value="2" class="input-text qty text">
+                                <input type="button" value="+" class="plus plus-btn">
+                            </div>
+                            <div class="cart-item-price">₹120</div>
+                        </div>
+
+                        <!-- <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button> -->
+                        <form action="https://cartgrow.herokuapp.com/cart-delete-item" method="POST">
+                            <input type="hidden" name="_csrf" value="BFjFkVHe-EL-oxz37BYFh7SfjMZOaQtn-LRY">
+                            <input type="hidden" value="5f74dfdf30b12306bcd77ce0" name="productId">
+                            <button class="cart-close-btn" type="submit"><i class="uil uil-multiply"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="cart-product-img">
+                        <img src="./CartGrow_Checkout_files/function toISOString() { [native code] }-kiwi.jpg"
+                            alt="Kiwi 3 pcs">
+                        <!-- <div class="offer-badge">6% OFF</div> -->
+                    </div>
+                    <div class="cart-text">
+                        <h4>Kiwi 3 pcs</h4>
+
+                        <!-- <div class="cart-radio">
+                                <ul class="kggrm-now">
+                                    <li>
+                                        <input type="radio" id="a1" name="cart1">
+                                        <label for="a1">0.50</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="a2" name="cart1">
+                                        <label for="a2">1kg</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="a3" name="cart1">
+                                        <label for="a3">2kg</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="a4" name="cart1">
+                                        <label for="a4">3kg</label>
+                                    </li>
+                                </ul>
+                            </div> -->
+                        <div class="qty-group">
+                            <div class="quantity buttons_added">
+                                <input type="button" value="-" class="minus minus-btn">
+                                <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+                                <input type="button" value="+" class="plus plus-btn">
+                            </div>
+                            <div class="cart-item-price">₹120</div>
+                        </div>
+
+                        <!-- <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button> -->
+                        <form action="https://cartgrow.herokuapp.com/cart-delete-item" method="POST">
+                            <input type="hidden" name="_csrf" value="BFjFkVHe-EL-oxz37BYFh7SfjMZOaQtn-LRY">
+                            <input type="hidden" value="5f76d1af81a4dc056c49f637" name="productId">
+                            <button class="cart-close-btn" type="submit"><i class="uil uil-multiply"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="bs-canvas-footer">
+            <!-- <div class="cart-total-dil saving-total ">
+                <h4>Total Saving</h4>
+                <span>$11</span>
+            </div>
+            <div class="main-total-cart">
+                <h2>Total</h2>
+                <span>$35</span>
+            </div> -->
+            <div class="checkout-cart">
+                <!-- <a href="##" class="promo-code">Have a promocode?</a> -->
+                <a href="https://cartgrow.herokuapp.com/checkout" class="cart-checkout-btn hover-btn">Proceed to
+                    Checkout</a>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <!-- 
+<div class="bs-canvas bs-canvas-left position-fixed bg-cart h-100">
+  <div class="bs-canvas-header side-cart-header p-3 ">
+      <div class="d-inline-block  main-cart-title">My Cart <span>(2 Items)</span></div>
+      <button type="button" class="bs-canvas-close close" aria-label="Close"><i class="uil uil-multiply"></i></button>
+  </div>
+  <div class="bs-canvas-body">
+      <div class="cart-top-total">
+          <div class="cart-total-dil">
+              <h4>Gambo Super Market</h4>
+              <span>$34</span>
+          </div>
+          <div class="cart-total-dil pt-2">
+              <h4>Delivery Charges</h4>
+              <span>$1</span>
+          </div>
+      </div>
+      <div class="side-cart-items">
+          <div class="cart-item">
+              <div class="cart-product-img">
+                  <img src="./Gambo - Index_files/img-1.jpg" alt="">
+                  <div class="offer-badge">6% OFF</div>
+              </div>
+              <div class="cart-text">
+                  <h4><Product Title Here></h4>
+                  <div class="cart-radio">
+                      <ul class="kggrm-now">
+                          <li>
+                              <input type="radio" id="a1" name="cart1">
+                              <label for="a1">0.50</label>
+                          </li>
+                          <li>
+                              <input type="radio" id="a2" name="cart1">
+                              <label for="a2">1kg</label>
+                          </li>
+                          <li>
+                              <input type="radio" id="a3" name="cart1">
+                              <label for="a3">2kg</label>
+                          </li>
+                          <li>
+                              <input type="radio" id="a4" name="cart1">
+                              <label for="a4">3kg</label>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="qty-group">
+                      <div class="quantity buttons_added">
+                          <input type="button" value="-" class="minus minus-btn">
+                          <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+                          <input type="button" value="+" class="plus plus-btn">
+                      </div>
+                      <div class="cart-item-price">$10 <span>$15</span></div>
+                  </div>
+
+                  <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button>
+              </div>
+          </div>
+      </div>
+    </div>
+</div> -->
+
+    <!-- Cart Sidebar Offsetl End-->
+
+    <!-- Header Start -->
+    <%- include('../includes/m-header.ejs') %>
+    <!-- Header End -->
+
+    <!-- Add Address Model Start-->
+    <div id="address_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog"
+        aria-hidden="true" style="display: none;">
+        <div class="modal-dialog category-area" role="document">
+            <div class="category-area-inner">
+                <div class="modal-header">
+                    <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+                        <i class="uil uil-multiply"></i>
+                    </button>
+                </div>
+                <div class="category-model-content modal-content">
+                    <div class="cate-header">
+                        <h4>Add New Address</h4>
+                    </div>
+                    <div class="add-address-form">
+                        <div class="checout-address-step">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <form class="product-form" action="/add-address" method="POST"
+                                        enctype="multipart/form-data">
+
+                                        <!-- Multiple Radios (inline) -->
+                                        <!-- <div class="form-group">
+                                        <div class="product-radio">
+                                            <ul class="product-now">
+                                                <li>
+                                                    <input type="radio" id="ad1" name="address1" checked="" value="home">
+                                                    <label for="ad1">Home</label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" id="ad2" name="address1" value="office">
+                                                    <label for="ad2">Office</label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" id="ad3" name="address1">
+                                                    <label for="ad3">Other</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div> -->
+                                        <div class="address-fieldset">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Name*</label>
+                                                        <input id="name" name="name" type="text" placeholder="Name"
+                                                            class="form-control input-md"
+                                                            value="<% if (editing) { %><%= address.name %><% } %>"
+                                                            required="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Phone No.*</label>
+                                                        <input id="phoneNo" name="phoneNo" type="text"
+                                                            placeholder="Phone No." class="form-control input-md"
+                                                            required="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="add" class="control-label">Address*</label>
+                                                        <input id="add" name="add" type="text" placeholder="Address"
+                                                            class="form-control input-md" required=""
+                                                            value="<% if (editing) { %><%= address.add %><% } %>">
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="col-lg-12 col-md-12">
+                                                <div class="form-group">
+                                                    <label class="control-label">Street / Society / Office Name*</label>
+                                                    <input id="street" name="street" type="text" placeholder="Street Address" class="form-control input-md">
+                                                </div>
+                                            </div> -->
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Pincode*</label>
+                                                        <input id="pincode" name="pincode" type="number"
+                                                            placeholder="Pincode" class="form-control input-md"
+                                                            value="<% if (editing) { %><%= address.pincode %><% } %>"
+                                                            required="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Locality*</label>
+                                                        <input id="Locality" name="locality" type="text"
+                                                            placeholder="Enter City" class="form-control input-md"
+                                                            required=""
+                                                            value="<% if (editing) { %><%= address.locality %><% } %>">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12">
+                                                    <div class="form-group">
+                                                        <div class="address-btns">
+                                                            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                                            <button class="save-btn14 hover-btn"
+                                                                type="submit">Save</button>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Address Model End-->
+    <!-- Body Start -->
+
+
+
+    <div class="wrapper">
+        <div class="gambo-Breadcrumb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="all-product-grid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-7">
+                        <div id="checkout_wizard" class="checkout accordion left-chck145">
+                        
+                            <div class="pdpt-title">
+                                <span>
+                                    <h4 style="display: inline;">Select Delivery Address</h4><a style="display: inline;"
+                                        href="/" class="add-address hover-btn" data-toggle="modal"
+                                        data-target="#address_model">Add New Address</a>
+                                </span> 
+
+                            </div>
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="pdpt-bg">
+                                <div class="address-body">
+
+
+                                    <!-- Multiple Radios (inline) -->
+                                    <div class="address-fieldset">
+                                        <div class="row">
+
+                                            <div class="col-lg-12 col-md-12">
+                                                <div class="pdpt-bg">
+
+                        <div class="address-body">
+
+
+                            <% for (let address of adds) { %>
+                            <div class="address-item">
+                                <div class="address-icon1">
+                                    <i class="uil uil-home-alt"></i>
+                                </div>
+                                <div class="address-dt-all">
+                                    <!-- <h4>home</h4> -->
+                                    <!-- <p>#0000, wdfwwefw, wgwewef, gwegwege, 12214214</p>	 -->
+                                    <!-- <input id="payment_method" type="radio"
+                                        class="input-radio" name="fullAddress"
+                                        value="Name: <%= address.name %> Locality: <%= address.locality %> Pin code: <%= address.pincode %> Address: <%= address.add %>"
+                                        checked="checked"> -->
+                                    <label for="payment_method">
+                                        <!-- <p class="checkout-section__field col-lg-12 col-12">Anurag Verma ( 6387950435 )</p> -->
+                                        <p class="checkout-section__field">
+                                            <p> <b>Pincode</b> : <%= address.pincode %></p>
+											<p> <b>phoneNo</b> : <%= address.phoneNo %></p>
+		                                    <p> <b>Full Address</b> : <%= address.add %> </p>	
+                                            <p> <b>Locality</b> : <%= address.locality %></p>
+                                        </p> <label>
+                                            <ul class="action-btns">
+                            <!-- <li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a> -->
+                                </li>
+                                <form action="/delete-address" method="POST">
+                                    <input type="hidden" value="<%= address._id %>" name="addressId">
+                                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                    <button class="add-address hover-btn" type="submit"><i class="uil uil-trash-alt"></i>Delete Address</button>
+                                </form>
+                                <!-- <li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a> -->
+                                </li>
+                                                                            </ul>
+                                                                </div>
+                                                            </div>
+                                                            <% } %>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pdpt-title" style="text-align: center;">
+
+                                <button id="astvam" class="add-address hover-btn">ORDER</button>
+                                <script src="https://js.stripe.com/v3/"></script>
+                                <script>
+                                    var stripe = Stripe('pk_test_51Kv02pSH0CNSD487BlX6Vv6EvOCZamcsRVQjunLuu3eeALgwTJApkBDK37UJem2i331oqKxTPWELBCSceSnyt0HW00fl0k4leX');
+                                    var orderBtn = document.getElementById('astvam');
+                                    orderBtn.addEventListener('click', function(){
+                                        stripe.redirectToCheckout({
+                                            sessionId: '<%= sessionId %>'
+                                        });
+                                    });
+                                </script>
+
+                            </div>
+                            
+
+                            <div class="col-md-12">
+                                <div class="rpt100">
+                                    <ul class="radio--group-inline-container_1">
+                                        <li>
+                                            <div class="radio-item_1">
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="radio-item_1">
+                                                <!-- <input id="card1" value="card" name="paymentmethod" type="radio" data-minimum="50.0"> -->
+                                                <!-- <label for="card1" class="radio-label_1">Credit / Debit Card</label> -->
+                                                <!-- <button id="astvam" class="order-btn hover-btn">Credit/ Debit Cart</button> -->
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- edit here -->
+
+                    <div class="centered">
+                        
+                    </div>
+
+
+
+                    <div class="col-lg-4 col-md-5">
+                        <div class="pdpt-bg mt-0">
+                            <div class="pdpt-title">
+                                <h4>Order Summary</h4>
+                            </div>
+
+                            <% let totalprice = 0; %>
+                            <% products.forEach(p => { %>
+
+                            <div class="right-cart-dt-body">
+                                <div class="cart-item border_radius">
+                                    <div class="cart-product-img">
+                                        <img src="/<%= p.productId.imageUrl %>" alt="Kiwi 3 pcs">
+                                        <!-- <div class="offer-badge">4% OFF</div> -->
+                                    </div>
+
+                                    <% let tprice = p.quantity*p.productId.price %>
+                                    <% totalprice += (p.productId.price*p.quantity); %>
+                                    <div class="cart-text">
+
+                                        <h6> <b><%= p.productId.title %></b> </h6>
+                                        <h6 style="margin-top: 10px;">Quantity: <%= p.quantity %></h6>
+                                        <!-- <h6>Price: ₹ <%= p.productId.price %></h6> -->
+                                        <span style="display: inline;">Price: ₹ <%= p.productId.price %>
+                                            <div style="display: inline; float: right;" class="qty-group">
+                                                <div class="cart-item-price"> ₹ <%= tprice %> </div>
+                                            </div>
+                                        </span>
+
+                                        <!-- <div class="cart-item-price">₹  </div> -->
+                                        <!-- <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <% }) %>
+
+                            <div class="total-checkout-group">
+
+
+                                <div class="cart-total-dil pt-3">
+                                    <h4>Delivery Charges</h4>
+                                    <span> free</span>
+                                </div>
+                            </div>
+                            <!-- <div class="cart-total-dil saving-total ">
+								<h4>Total Saving</h4>
+								<span>₹ 3</span>
+							</div> -->
+                            <div class="main-total-cart">
+                                <h2>Total</h2>
+                                <span>₹ <%= totalprice %></span>
+                            </div>
+
+                            <!-- <div class="centered">
+                <button id="order-btn" class="btn">ORDER</button>
+                <script src="https://js.stripe.com/v3/"></script>
+                <script>
+                    var stripe = Stripe('pk_test_51HQ0WlCVcmW5TqTjf4fLV3R1HGfN6JVuVHChGkvrDoCPU6YchmsV3puJXbwZCIkM2QbQwHotyvCAJSx7IFspjsRa00lOZ4yTMw');
+                    var orderBtn = document.getElementById('order-btn');
+                    orderBtn.addEventListener('click', function() {
+                        stripe.redirectToCheckout({
+                            sessionId: 'cs_test_b1d5RQyfF5PJDdnYbawNQDYW3w7M7XMlm8kVNCoJMgEo9fRNfJVRKRmVYj'
+                        });
+                    });
+                </script>
+            	</div> -->
+                            <!-- <div class="payment-secure">
+								<button id="astvam" class="order-btn hover-btn">Order Now</button>
+								<script src="https://js.stripe.com/v3/"></script>
+								
+								<script>
+									
+									var stripe = Stripe('pk_test_51HQ0WlCVcmW5TqTjf4fLV3R1HGfN6JVuVHChGkvrDoCPU6YchmsV3puJXbwZCIkM2QbQwHotyvCAJSx7IFspjsRa00lOZ4yTMw');
+									var orderBtn = document.getElementById('astvam');
+									orderBtn.addEventListener('click', function() {
+                        stripe.redirectToCheckout({
+                            sessionId: 'cs_test_b1d5RQyfF5PJDdnYbawNQDYW3w7M7XMlm8kVNCoJMgEo9fRNfJVRKRmVYj'
+                        });
+                    });
+								</script>
+								
+							</div> -->
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Footer Start -->
+        <%- include('../includes/m-foot.ejs') %>
+
+        <!-- Footer End -->
+
+        <!-- Javascripts -->
+        <%- include('../includes/m-footer.ejs') %>

@@ -1,0 +1,80 @@
+<%- include('../includes/m-head.ejs') %>
+
+		<link href="css/step-wizard.css" rel="stylesheet">
+
+	</head>
+<body>
+	<% if (errorMessage) { %>
+		<div class="user-message user-message--error"><%= errorMessage %></div>
+	<% } %>
+	<form class="login-form" action="/mysignup" method="POST" novalidate >
+		<div class="sign-inup">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-5">
+						<div class="sign-form">
+							<div class="sign-inner">
+								<div class="sign-logo" id="logo">
+									<a href="#"><img src="Gambo - Sign Up_files/logo.svg" alt=""></a>
+									<a href="#"><img class="logo-inverse" src="Gambo - Sign Up_files/dark-logo.svg" alt=""></a>
+								</div>
+								<div class="form-dt">
+									<div class="form-inpts checout-address-step">
+										<form>
+											<div class="form-title"><h6>Sign Up</h6></div>
+											<div class="form-group pos_rel">
+												<input 
+												id="name" 
+												name="name" 
+												type="text" 
+												placeholder="Full Name" 
+												class="form-control lgn_input" 
+												value="<%= oldInput.email %>" >
+												<i class="uil uil-user-circle lgn_icon"></i>
+											</div>
+											<div class="form-group pos_rel">
+												<input 
+												id="email" 
+												name="email" 
+												type="email" 
+												placeholder="Email Address" 
+												class="form-control lgn_input" 
+												value="<%= oldInput.email %>">
+												<i class="uil uil-envelope lgn_icon"></i>
+											</div>
+											<div class="form-group pos_rel">
+												<input id="password" 
+												name="password" 
+												type="password" 
+												placeholder="Password" 
+												class="form-control lgn_input" 
+												value="<%= oldInput.password %>">
+												<i class="uil uil-padlock lgn_icon"></i>
+											</div>
+											<div class="form-group pos_rel">
+												<input 
+												id="confirmPassword" 
+												name="confirmPassword" 
+												type="password" 
+												placeholder="Confirm Password" 
+												class="form-control lgn_input" 
+												value="<%= oldInput.confirmPassword %>">
+												<i class="uil uil-padlock lgn_icon"></i>
+											</div>
+											<input type="hidden" name="_csrf" value="<%= csrfToken %>">
+											<button class="login-btn hover-btn" type="submit">Sign Up Now</button>
+										</form>
+									</div>
+									<div class="signup-link">
+										<p>I have an account? - <a href="/mylogin">Sign In Now</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<%- include('../includes/m-footer.ejs') %>

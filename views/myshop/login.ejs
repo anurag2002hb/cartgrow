@@ -1,0 +1,64 @@
+<%- include('../includes/m-head.ejs') %>
+
+		<link href="css/step-wizard.css" rel="stylesheet">
+		<!-- Vendor Stylesheets -->
+	</head>
+<body>
+	<% if (errorMessage) { %>
+		<div class="user-message user-message--error"><%= errorMessage %></div>
+	<% } %>
+		<div class="sign-inup">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-5">
+						<div class="sign-form">
+							<div class="sign-inner">
+								<div class="sign-logo" id="logo">
+									<a href="#"></a>
+									<a href="#"></a>
+								</div>
+								<div class="form-dt">
+									<div class="form-inpts checout-address-step">
+										<form action="/mylogin" method="POST">
+											<div class="form-title"><h6>Sign In</h6></div>
+											<div class="form-group pos_rel">
+												<input 
+												id="phone[number]" 
+												name="email" 
+												type="email" 
+												placeholder="Enter E-Mail" 
+												class="form-control lgn_input" 
+												value="<%= oldInput.email %>" >
+												<i class="uil uil-mobile-android-alt lgn_icon"></i>
+											</div>
+											<div class="form-group pos_rel">
+												<input 
+												id="password" 
+												name="password" 
+												type="password" 
+												placeholder="Enter Password" 
+												class="form-control lgn_input" 
+												value="" >
+												<i class="uil uil-padlock lgn_icon"></i>
+											</div>
+											<input type="hidden" name="_csrf" value="<%= csrfToken %>">
+											<button class="login-btn hover-btn" type="submit">Sign In Now</button>
+										</form>
+									</div>
+									<div class="password-forgor">
+										<a href="#">Forgot Password?</a>
+									</div>
+									<div class="signup-link">
+										<p>Don't have an account? - <a href="/mysignup">Sign Up Now</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- Javascripts -->
+
+	<%- include('../includes/m-footer.ejs') %>
+

@@ -1,0 +1,667 @@
+<%- include('../includes/m-head.ejs') %>
+
+</head>
+
+<body>
+
+    <!-- Category Model Start-->
+    <%- include('../includes/catnsearch.ejs') %>
+    <!-- Search Model End-->
+    <!-- Cart Sidebar Offset Start-->
+    
+    <div class="bs-canvas bs-canvas-left position-fixed bg-cart h-100">
+        <div class="bs-canvas-header side-cart-header p-3 ">
+            <div class="d-inline-block  main-cart-title">My Cart <span></span></div>
+            <button type="button" class="bs-canvas-close close" aria-label="Close"><i class="uil uil-multiply"></i></button>
+        </div>
+             <div class="bs-canvas-body">
+                <div class="cart-top-total">
+                    <div class="cart-total-dil">
+                        <h4>CartGrow</h4>
+                    </div>
+                </div>
+                <div class="side-cart-items">
+                    
+                        <div class="cart-item">
+                            <div class="cart-product-img">
+                                <img src="/images\function toISOString() { [native code] }-orange.jpg" alt="Orange 6 pcs">
+                                
+                            </div>
+                            <div class="cart-text">
+                                <h4>Orange 6 pcs</h4>
+                                <div class="qty-group">
+                                    <div class="quantity buttons_added">
+                                        <input type="button" value="-" class="minus minus-btn">
+                                        <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+                                        <input type="button" value="+" class="plus plus-btn">
+                                    </div>
+                                    <div class="cart-item-price">₹70</div>
+                                </div>
+            
+                                <!-- <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button> -->
+                                <form action="/cart-delete-item" method="POST">
+                                <input type="hidden" name="_csrf" value="pNkBoky1-kVN9N9C4Sb3_OSeT29efus7f-vY">
+                                <input type="hidden" value="5f74df4130b12306bcd77cdf" name="productId">
+                                <button class="cart-close-btn" type="submit"><i class="uil uil-multiply"></i></button>
+                            </form>
+                            </div>
+                        </div>
+                    
+                        <div class="cart-item">
+                            <div class="cart-product-img">
+                                <img src="/images\function toISOString() { [native code] }-apple.jpg" alt="Apple 6 pcs">
+                                <!-- <div class="offer-badge">6% OFF</div> -->
+                            </div>
+                            <div class="cart-text">
+                                <h4>Apple 6 pcs</h4>
+                                <div class="qty-group">
+                                    <div class="quantity buttons_added">
+                                        <input type="button" value="-" class="minus minus-btn">
+                                        <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+                                        <input type="button" value="+" class="plus plus-btn">
+                                    </div>
+                                    <div class="cart-item-price">₹120</div>
+                                </div>
+            
+                                <!-- <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button> -->
+                                <form action="/cart-delete-item" method="POST">
+                                <input type="hidden" name="_csrf" value="pNkBoky1-kVN9N9C4Sb3_OSeT29efus7f-vY">
+                                <input type="hidden" value="5f74dfdf30b12306bcd77ce0" name="productId">
+                                <button class="cart-close-btn" type="submit"><i class="uil uil-multiply"></i></button>
+                            </form>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+            <div class="bs-canvas-footer">
+                <!-- <div class="cart-total-dil saving-total ">
+                    <h4>Total Saving</h4>
+                    <span>$11</span>
+                </div>
+                <div class="main-total-cart">
+                    <h2>Total</h2>
+                    <span>$35</span>
+                </div> -->
+                <div class="checkout-cart">
+                    <!-- <a href="##" class="promo-code">Have a promocode?</a> -->
+                    <a href="/checkout" class="cart-checkout-btn hover-btn">Proceed to Checkout</a>
+                </div>
+            </div>
+            
+              
+        </div>
+
+    
+
+    <!-- Header Start -->
+    <%- include('../includes/m-header.ejs') %>
+    <!-- Header End -->
+    <!-- Body Start -->
+    <div class="wrapper">
+
+        
+
+        <!-- Offers Start -->
+        <div class="main-banner-slider">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="owl-carousel offers-banner owl-theme owl-loaded owl-drag">
+                            <div class="owl-stage-outer">
+                                <div class="owl-stage"
+                                    style="transform: translate3d(-1200px, 0px, 0px); transition: all 0.25s ease 0s; width: 4400px;">
+                                    <div class="owl-item active" style="width: 370px; margin-right: 30px;">
+                                        <div class="item">
+                                            <div class="offer-item">
+                                                <a href="/masalas-spices">
+                                                    <div class="offer-item-img">
+                                                        <div class="gambo-overlay"></div>
+                                                        <img src="cartgrow/util/Screenshot_9.png" alt="">
+                                                        
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item active" style="width: 370px; margin-right: 30px;">
+                                        <div class="item">
+                                            <div class="offer-item">
+                                                <a href="/fruits">
+                                                    <div class="offer-item-img">
+                                                        <div class="gambo-overlay"></div>
+                                                        <img src="cartgrow/util/Screenshot_7.png" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item active" style="width: 370px; margin-right: 30px;">
+                                        <div class="item">
+                                            <div class="offer-item">
+                                                <a href="/dals-pulses">
+                                                    <div class="offer-item-img">
+                                                        <div class="gambo-overlay"></div>
+                                                        <img src="cartgrow/util/Screenshot_8.png" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item active" style="width: 370px; margin-right: 30px;">
+                                        <div class="item">
+                                            <div class="offer-item">
+                                                <a href="/vegetables">
+                                                    <div class="offer-item-img">
+                                                        <div class="gambo-overlay"></div>
+                                                        <img src="cartgrow/util/Screenshot_13.png" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item active" style="width: 370px; margin-right: 30px;">
+                                        <div class="item">
+                                            <div class="offer-item">
+                                                <a href="/dry-fruits">
+                                                    <div class="offer-item-img">
+                                                        <div class="gambo-overlay"></div>
+                                                        <img src="cartgrow/util/Screenshot_6.png" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item active" style="width: 370px; margin-right: 30px;">
+                                        <div class="item">
+                                            <div class="offer-item">
+                                                <a href="/vegetables">
+                                                    <div class="offer-item-img">
+                                                        <div class="gambo-overlay"></div>
+                                                        <img src="cartgrow/util/Screenshot_10.png" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-nav disabled"><button type="button" role="presentation"
+                                    class="owl-prev"><span aria-label="Previous">←</span></button><button type="button"
+                                    role="presentation" class="owl-next"><span aria-label="Next">→</span></button></div>
+                            <div class="owl-dots disabled"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Offers End -->
+        <!-- Categories Start -->
+        <div class="section145">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-title-tt">
+                            <div class="main-title-left">
+                                <!-- <span>Shop By Categories</span> -->
+                                <h3>Shop By Categories</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="owl-carousel cate-slider owl-theme owl-loaded owl-drag">
+                            <div class="owl-stage-outer">
+                                <div class="owl-stage"
+                                    style="transform: translate3d(-1200px, 0px, 0px); transition: all 0s ease 0s; width: 4600px;">
+                                    
+                                    <div class="owl-item active">
+                                        <div class="item">
+                                            <a href="/vegetables" class="category-item">
+                                                <div class="cate-img" style="border: 2px solid #21ba45;">
+                                                    <img src="cartgrow/util/food.svg" alt="">
+                                                </div>
+                                                <h4>Vegetables </h4>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item active">
+                                        <div class="item">
+                                            <a href="/fruits" class="category-item">
+                                                <div class="cate-img" style="border: 2px solid #971c62;">
+                                                    <img src="cartgrow/util/fruits.svg" alt="">
+                                                </div>
+                                                <h4 style="background-color: #971c62;">Fruits</h4>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="owl-item active">
+                                        <div class="item">
+                                            <a href="/staples" class="category-item">
+                                                <div class="cate-img" style="border: 2px solid #f47721;">
+                                                    <img src="cartgrow/util/groceries.svg" alt="">
+                                                </div>
+                                                <h4 style="background-color: #f47721;"> Staples </h4>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="owl-item active">
+                                        <div class="item">
+                                            <a href="/beverages" class="category-item">
+                                                <div class="cate-img" style="border: 2px solid #fcc20e;">
+                                                    <img src="cartgrow/util/juice.svg" alt="">
+                                                </div>
+                                                <h4 style="background-color: #fcc20e;"> Beverages </h4>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="owl-item active" >
+                                        <div class="item">
+                                            <a href="/snacks" class="category-item">
+                                                <div class="cate-img">
+                                                    <img src="./cartgrow/util/snack.svg" alt="">
+                                                </div>
+                                                <h4> Snacks </h4>
+                                            </a>
+                                        </div>
+                                    </div> -->
+                                    <div class="owl-item active">
+                                        <div class="item">
+                                            <a href="/stationary" class="category-item">
+                                                <div class="cate-img" style="border: 2px solid #73caf2;">
+                                                    <img src="cartgrow/util/agenda.svg" alt="">
+                                                </div>
+                                                <h4 style="background-color: #73caf2;"> Stationary </h4>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item active" >
+                                        <div class="item">
+                                            <a href="//handmade-crafts" class="category-item">
+                                                <div class="cate-img">
+                                                    <img src="cartgrow/util/agenda.svg" alt="">
+                                                </div>
+                                                <h4> Crafts </h4>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item active" >
+                                        <div class="item">
+                                            <a href="//medicine" class="category-item">
+                                                <div class="cate-img">
+                                                    <img src="cartgrow/util/medicine.svg" alt="">
+                                                </div>
+                                                <h4> Medicine </h4>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item active" >
+                                        <div class="item">
+                                            <a href="/dairy" class="category-item">
+                                                <div class="cate-img">
+                                                    <img src="./cartgrow/util/icon-3.svg" alt="">
+                                                </div>
+                                                <h4> Dairy </h4>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="uil uil-angle-left"></i>
+                            </button><button type="button" role="presentation"  class="owl-next"><i class="uil uil-angle-right"></i></button>
+                            </div>
+                            <div class="owl-dots disabled"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Categories End -->
+
+        
+        
+
+        
+
+        <!-- Featured Products Start -->
+        <div class="section145">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-title-tt">
+                            <div class="main-title-left">
+                                <!-- <span>For You</span>
+                                <h2>Featured Products</h2> -->
+                                <h3>Fresh Fruits</h3>
+                            </div>
+                            <a href="#" class="see-more-btn">See All</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="owl-carousel featured-slider owl-theme owl-loaded owl-drag">
+                            <div class="owl-stage-outer">
+                                <div class="owl-stage"
+                                    style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1888px;">
+                                    <% products.forEach(product => { %>
+                                        <% if(product.category == 'fruits'){ %>
+                                        
+                                        
+                                    <div class="owl-item"
+                                        style="width: 226px; margin-right: 10px; background-color: #fff; background-color: #fff;">
+                                        <div class="item">
+                                            <div class="product-item">
+                                                <a href="single-product-view/<%= product._id %>"
+                                                    class="product-img">
+                                                    <!-- <img src="./Gambo - Shop Grid_files/img-14.jpg" alt=""> -->
+                                                    <img src="<%= product.imageUrl %>"
+                                                        alt="Apple 6 pcs">
+                                                    <div class="product-absolute-options">
+                                                        <span class="offer-badge-1">5%-OFF</span>
+                                                    </div>
+                                                </a>
+                                                <div class="product-text-dt">
+                                                    <!-- <p>Available<span>(In Stock)</span></p> -->
+                                                    <h4><%= product.title %></h4>
+                                                    <div class="product-price">₹<%= product.price %><span>₹15</span></div>
+                                                    <div class="qty-cart">
+                                                        <%- include('../includes/m-add-to-cart.ejs', {product: product}) %>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                        <% } %>
+                                     <% }); %>
+                                </div>
+                            </div>
+                            <div class="owl-nav"><button type="button" role="presentation" class="owl-prev disabled"><i
+                                        class="uil uil-angle-left"></i></button><button type="button"
+                                    role="presentation" class="owl-next"><i class="uil uil-angle-right"></i></button>
+                            </div>
+                            <div class="owl-dots disabled"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Featured Products End -->
+        <!-- Best Values Offers Start -->
+        <div class="section145">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-title-tt">
+                            <div class="main-title-left">
+                                <!-- <span>Offers</span>
+                                <h2>Best Values</h2> -->
+                                <h3>Your Daily Staples</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 anurag-f" style="padding-right: 0px;">
+                        <a href="/atta-flour-suji" class="best-offer-item">
+                            <div class="how-design-steps">
+                                <div class="how-order-icon">
+                                    <img src="cartgrow/util/c1.jpg" alt="">
+                                </div>
+                                <div class="anurag-e" style="background-color: #ee2e5e;">
+                                    <h4>Atta & Flour</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 anurag-f" style="padding-right: 0px;">
+                        <a href="/rice" class="best-offer-item">
+                            <div class="how-design-steps">
+                                <div class="how-order-icon">
+                                    <img src="cartgrow/util/c2.jpg" alt="">
+                                </div>
+                                <div class="anurag-e" style=" background-color:#f47721; ">
+                                    <h4>Rice</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 anurag-f" style="padding-right: 0px;">
+                        <a href="/salt-sugar-jaggery" class="best-offer-item">
+                            <div class="how-design-steps">
+                                <div class="how-order-icon">
+                                    <img src="cartgrow/util/c3.jpg" alt="">
+                                </div>
+                                <div class="anurag-e" style=" background-color: #f8a90d;">
+                                    <h4>Salt & Suger</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 anurag-f" style="padding-right: 0px;">
+                        <a href="/dals" class="best-offer-item">
+                            <div class="how-design-steps">
+                                <div class="how-order-icon">
+                                    <img src="cartgrow/util/c4.jpg" alt="">
+                                </div>
+                                <div class="anurag-e" style=" background-color: #84b51a;">
+                                    <h4>Dals & Pulses</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       
+        <!-- Vegetables and Fruits Start -->
+        <div class="section145">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-title-tt">
+                            <div class="main-title-left">
+                                <!-- <span>For You</span>
+                                <h2>Fresh Vegetables & Fruits</h2> -->
+                                <h3>Fresh Vegetables</h3>
+                            </div>
+                            <a href="#" class="see-more-btn">See All</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="owl-carousel featured-slider owl-theme owl-loaded owl-drag">
+                            <div class="owl-stage-outer">
+                                <div class="owl-stage"
+                                    style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1888px;">
+                                    <% let count = 0; %>
+                                    <% products.forEach(product => { %>
+                                        <% if(product.category == 'vegetables' && count < 8){ %>
+                                        <% count++; %>
+                                    <div class="owl-item"
+                                        style="width: 226px; margin-right: 10px; background-color: #fff; background-color: #fff;">
+                                        <div class="item">
+                                            <div class="product-item">
+                                                <a href="single-product-view/<%= product._id %>"
+                                                    class="product-img">
+                                                    <!-- <img src="./Gambo - Shop Grid_files/img-14.jpg" alt=""> -->
+                                                    <img src="<%= product.imageUrl %>"
+                                                        alt="Ridged gourd 1kg">
+                                                    <div class="product-absolute-options">
+                                                        <span class="offer-badge-1">5%-OFF</span>
+                                                    </div>
+                                                </a>
+                                                <div class="product-text-dt">
+                                                    <!-- <p>Available<span>(In Stock)</span></p> -->
+                                                    <h4><%= product.title %></h4>
+                                                    <div class="product-price">₹<%= product.price %><span>₹15</span></div>
+                                                    <div class="qty-cart">
+                                                        <!-- <div class="quantity buttons_added">
+                                                            <input type="button" value="-" class="minus minus-btn">
+                                                            <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+                                                            <input type="button" value="+" class="plus plus-btn">
+                                                        </div> -->
+                                                        <%- include('../includes/m-add-to-cart.ejs', {product: product}) %>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                        <% } %>
+                                    <% }); %>
+
+                                </div>
+                            </div>
+                            <div class="owl-nav"><button type="button" role="presentation" class="owl-prev disabled"><i
+                                        class="uil uil-angle-left"></i></button><button type="button"
+                                    role="presentation" class="owl-next"><i class="uil uil-angle-right"></i></button>
+                            </div>
+                            <div class="owl-dots disabled"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Vegetables and Fruits Products End -->
+        <!-- Best Values Offers Start -->
+        <div class="section145">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-title-tt">
+                            <div class="main-title-left">
+                                <!-- <span>Offers</span>
+                                <h2>Best Values</h2> -->
+                                <h3>Your Daily Essentials</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 anurag-f" style="padding-right: 0px;">
+                        <a href="/dry-fruits" class="best-offer-item">
+                            <div class="how-design-steps">
+                                <div class="how-order-icon">
+                                    <img src="cartgrow/util/Untitled.png" alt="">
+                                </div>
+                                <div class="anurag-e" style=" background-color: #f8a90d;">
+                                    <h4>Dry Fruits</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 anurag-f" style="padding-right: 0px;">
+                        <a href="/health-drinks" class="best-offer-item">
+                            <div class="how-design-steps">
+                                <div class="how-order-icon">
+                                    <img src="cartgrow/util/2235.jpg" alt="">
+                                </div>
+                                <div class="anurag-e" style=" background-color:#af6838;">
+                                    <h4>Health Drinks</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 anurag-f" style="padding-right: 0px;">
+                        <a href="/masalas-spices" class="best-offer-item">
+                            <div class="how-design-steps">
+                                <div class="how-order-icon">
+                                    <img src="cartgrow/util/oopCopy.jpg" alt="">
+                                </div>
+                                <div class="anurag-e" style=" background-color: #f47721;">
+                                    <h4>Spices & Masala</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 anurag-f" style="padding-right: 0px;">
+                        <a href="/tea" class="best-offer-item">
+                            <div class="how-design-steps">
+                                <div class="how-order-icon">
+                                    <img src="cartgrow/util/444.png" alt="">
+                                    <!-- <img src="./cartgrow/util/wwe - Copy.jpg" alt=""> -->
+                                </div>
+                                <div class="anurag-e" style=" background-color: #971c62;">
+                                    <h4>Tea & Coffee</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Best Values Offers End -->
+        <!-- New Products Start -->
+        <div class="section145">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-title-tt">
+                            <div class="main-title-left">
+                                <!-- <span>For You</span>
+                                <h2>Added New Products</h2> -->
+                                <h3> Spices & Masala</h3>
+                            </div>
+                            <a href="#" class="see-more-btn">See All</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="owl-carousel featured-slider owl-theme owl-loaded owl-drag">
+                            <div class="owl-stage-outer">
+                                <div class="owl-stage"
+                                    style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1888px;">
+                                <% count = 0; %>
+                                <% products.forEach(product => { %>
+                                    <% if(product.category == 'masalas-spices' && count < 8){ %>
+                                        <% count++; %>
+                                    <div class="owl-item"
+                                        style="width: 226px; margin-right: 10px; background-color: #fff; background-color: #fff;">
+                                        <div class="item">
+                                            <div class="product-item">
+                                                <a href="single-product-view/<%= product._id %>"
+                                                    class="product-img">
+                                                    <!-- <img src="./Gambo - Shop Grid_files/img-14.jpg" alt=""> -->
+                                                    <img src="<%= product.imageUrl %>"
+                                                        alt="Everest Sambhar Masala 50g">
+                                                    <div class="product-absolute-options">
+                                                        <span class="offer-badge-1">5%-OFF</span>
+                                                    </div>
+                                                </a>
+                                                <div class="product-text-dt">
+                                                    <!-- <p>Available<span>(In Stock)</span></p> -->
+                                                    <h4><%= product.title %></h4>
+                                                    <div class="product-price">₹<%= product.price %><span>₹15</span></div>
+                                                    <div class="qty-cart">
+                                                        <!-- <div class="quantity buttons_added">
+                                                            <input type="button" value="-" class="minus minus-btn">
+                                                            <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+                                                            <input type="button" value="+" class="plus plus-btn">
+                                                        </div> -->
+                                                        <%- include('../includes/m-add-to-cart.ejs', {product: product}) %>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <% } %>
+                                <% }); %>    
+                                </div>
+                            </div>
+                            <div class="owl-nav"><button type="button" role="presentation" class="owl-prev disabled"><i
+                                        class="uil uil-angle-left"></i></button><button type="button"
+                                    role="presentation" class="owl-next"><i class="uil uil-angle-right"></i></button>
+                            </div>
+                            <div class="owl-dots disabled"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- New Products End -->
+    </div>
+    <!-- Body End -->
+    <!-- Footer Start -->
+
+    <%- include('../includes/m-foot.ejs') %>
+    <!-- Footer End -->
+
+
+    <%- include('../includes/m-footer.ejs') %>

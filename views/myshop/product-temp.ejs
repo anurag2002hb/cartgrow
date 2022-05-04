@@ -1,0 +1,169 @@
+<%- include('../includes/m-head.ejs') %>
+
+	</head>
+<body>
+	<!-- Category Model Start-->
+	<%- include('../includes/catnsearch.ejs') %>
+    <!-- Search Model End-->
+    <!-- Cart Sidebar Offset Start-->
+    <div class="bs-canvas bs-canvas-left position-fixed bg-cart h-100">
+    <div class="bs-canvas-header side-cart-header p-3 ">
+        <div class="d-inline-block  main-cart-title">My Cart <span></span></div>
+        <button type="button" class="bs-canvas-close close" aria-label="Close"><i class="uil uil-multiply"></i></button>
+    </div>
+        <h1>Please login here</h1>
+        <li>
+            <input type="hidden" name="_csrf" value="nR2ytv2o-h2KQ5-wwE8RFrjoEuAdqIRbOpqw"> 
+              <a href="login.html" class="offer-link"><i class="uil uil-phone-alt"></i>Login</a>
+        </li>
+</div>
+
+    <!-- Cart Sidebar Offsetl End-->
+    <!-- Header Start -->
+    <%- include('../includes/m-header.ejs') %>
+    <!-- Header End -->
+  <!-- by me -->
+        <!-- Body Start -->
+	<div class="wrapper">
+		<div class="gambo-Breadcrumb">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="/">Home</a></li>
+								<li class="breadcrumb-item active" aria-current="page"><%= prodHead %></li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+			</div>
+        </div>
+        <!-- Best Values Offers Start -->
+        <!-- <div class="section145">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-title-tt">
+                            <div class="main-title-left">
+                                <span>Offers</span>
+                                <h2>Best Values</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a href="#" class="best-offer-item">
+                            <img src="./Gambo - Index_files/offer-1(1).jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a href="#" class="best-offer-item">
+                            <img src="./Gambo - Index_files/offer-2(1).jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a href="#" class="best-offer-item offr-none">
+                            <img src="./Gambo - Index_files/offer-3(1).jpg" alt="">
+                            <div class="cmtk_dt">
+                                <div class="product_countdown-timer offer-counter-text" data-countdown="2021/01/06">218 days 09:46:44</div>
+                            </div>
+                        </a>
+                    </div> -->
+                    <!-- <div class="col-md-12">
+                        <a href="#" class="code-offer-item">
+                            <img src="./Gambo - Index_files/offer-4(1).jpg" alt="">
+                        </a>
+                    </div> -->
+                <!-- </div>
+            </div>
+        </div> -->
+        <!-- Best Values Offers End -->
+		<div class="all-product-grid">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="product-top-dt">
+							<div class="product-left-title">
+								<h2><%= prodHead %></h2>
+							</div>
+
+							<!-- <a href="#" class="filter-btn pull-bs-canvas-right">Filters</a>
+							<div class="product-sort">
+								<div class="ui selection dropdown vchrt-dropdown" tabindex="0">
+									<input name="gender" type="hidden" value="default">
+									<i class="dropdown icon d-icon"></i>
+									<div class="text">Popularity</div>
+									<div class="menu" tabindex="-1">
+										<div class="item" data-value="0">Popularity</div>
+										<div class="item" data-value="1">Price - Low to High</div>
+										<div class="item" data-value="2">Price - High to Low</div>
+										<div class="item" data-value="3">Alphabetical</div>
+										<div class="item" data-value="4">Saving - High to Low</div>
+										<div class="item" data-value="5">Saving - Low to High</div>
+										<div class="item" data-value="6">% Off - High to Low</div>
+									</div>
+								</div>
+							</div> -->
+
+						</div>
+					</div>
+				</div>
+				<div class="product-list-view">
+					<div class="row">
+                        <% let count = 0; %>
+                        <% for (let product of prods) { %>
+
+                            <div class="col-lg-3 col-md-6 anurag-g">
+                                <div class="product-item mb-30">
+                                    <a href="single-product-view/<%= product._id %>" class="product-img">
+                                        
+                                        <img src="<%= product.imageUrl %>">
+                                        <div class="product-absolute-options">
+                                        <span class="offer-badge-1">5% Off</span>
+                                        <!-- <span class="like-icon" title="wishlist"><i class="uil uil-heart-sign"></i></span> -->
+                                        <!-- <form action="wishlist.html" method="POST">
+                                            <input type="hidden" name="_csrf" value="nR2ytv2o-h2KQ5-wwE8RFrjoEuAdqIRbOpqw">
+                                            <button class="add-cart-btn hover-btn" type="submit"><i class="uil uil-heart-sign"></i></button>
+                                            <input type="hidden" name="productId" value="5f7ca361d3fe2c3d0c7fb9f6">
+                                        </form> -->
+                                        </div>
+                                    </a>
+                                    <div class="product-text-dt">
+                                        <!-- <p>Available<span>(In Stock)</span></p> -->
+                                        <h4><%= product.title %></h4>
+                                        <div class="product-price">₹<%= product.price %><span>₹15</span></div>
+                                        <div class="qty-cart">
+                                        <!-- <div class="quantity buttons_added">
+                                            <input type="button" value="-" class="minus minus-btn">
+                                            <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+                                            <input type="button" value="+" class="plus plus-btn">
+                                        </div> -->
+                                        <!-- <span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i>
+                                            <form action="cart.html" method="POST">
+                                                <button class="add-cart-btn " type="submit" style="background-color: #fff;"></button>
+                                                <input type="hidden" name="productId" value="5f7ca361d3fe2c3d0c7fb9f6">
+                                            </form>
+                                        </span> -->
+                                        
+                                        <%- include('../includes/m-add-to-cart.ejs', {product: product}) %>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        <% } %>
+						<div class="col-md-12">
+							<div class="more-product-btn">
+								
+							</div>
+						</div>
+					</div>
+                </div>
+			</div>
+		</div>
+	</div>
+	<!-- Body End -->
+    <%- include('../includes/m-foot.ejs') %>
+	<!-- Javascripts -->
+
+    <%- include('../includes/m-footer.ejs') %>
+
