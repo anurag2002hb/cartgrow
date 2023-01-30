@@ -12,10 +12,11 @@ const multer = require('multer');
 const errorController = require('./controllers/error');
 const User = require('./models/user');
 
-const MONGODB_URI =
-`mongodb+srv://${process.env.MONGO_USER}:${
-  process.env.MONGO_PASSWORD
-}@cluster0.rwgb6.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
+const MONGODB_URI = "mongodb+srv://nodemysql96:16143758@cluster0.rwgb6.mongodb.net/shop";
+// `mongodb+srv://${process.env.MONGO_USER}:${
+//   process.env.MONGO_PASSWORD
+// }@cluster0.rwgb6.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
+      
 
 
 const app = express();
